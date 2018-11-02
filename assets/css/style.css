@@ -17,16 +17,16 @@ header {
 }
 
 #header-container {
-    width: 960px;
+    width: 80%;
     margin: 0px auto;
 }
 
 #header-name{
     display: inline-block;
-    padding: 20px;
+    padding: 25px 20px;
     background-color: #4aaaa5;
     color: #ffffff;
-    margin-bottom: 0px;
+    margin: 0px;
 }
 
 /*---------
@@ -67,9 +67,11 @@ nav a{
 -----------*/
 
 .content {
-    width: 960px;
+    max-width: 960px;
     /* height: 960px; */
-    margin: 20px auto 10px;
+    
+    margin: auto;
+    margin-top: 20px;
     background-color: #fff;
     padding: 10px 0px;
 
@@ -85,7 +87,7 @@ h2 {
 
 article img {
     float: left;
-    margin: 5px 15px;
+    margin: 5px 15px 5px 0px;
 }
 
 article {
@@ -102,10 +104,12 @@ section {
 
 }
 footer {
+    width: 100%;
     text-align: center;
     height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #3b3b3b;
-    color: #fff;
+    color: #cccccc;
     border-top: 8px #4aaaa5 solid;
 
 }
@@ -168,5 +172,79 @@ input[type=submit] {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
     background-color: #4aaaa5;
+
+}
+
+/********** 980 screens ***********/
+
+@media only screen and (max-width: 980px) {
+
+    .content{
+        width: 80%;
+    }
+    #grid-container{
+
+        width: 100%;
+    }
+}
+
+/********** 768 screens ***********/
+@media only screen and (max-width: 768px) {
+    #header-container {
+        width: 95%;
+        
+    }
+
+    .content {
+        width: 95%;
+        margin: 10px auto;
+    }
+}
+/********** 640 screens ***********/
+
+@media only screen and (max-width: 640px) {
+    .content {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+/* Fix header */
+
+    #header-container {
+        width: 100%;
+    }
+
+    #pg-menu {
+        float: none;
+        width: 100%;
+        text-align: center;
+        position: static;
+    }
+
+    #header-name {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+        padding: 25px 0px;
+    }
+
+    /* Split Grid to one column */
+
+    #grid-container{
+
+        grid-template-columns: auto;
+        
+    }
+
+    .grid-item img{
+        width: 100%;
+
+    }
+
+    .caption {
+        font-size: 1.3em;
+    }
+
 
 }
